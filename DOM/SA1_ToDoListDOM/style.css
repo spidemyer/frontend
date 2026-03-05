@@ -1,0 +1,17 @@
+li{
+    display: flex;
+    justify-content: space-between;
+    background-color: #b475c0;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.btnRemove{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #c78bc7;
+    border: none;
+    cursor: pointer;
+    color: aliceblue;
+}

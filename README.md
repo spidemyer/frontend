@@ -1,4 +1,4 @@
-# FrontEnde
+# FrontEnd
 
 ## 29/01/2026
 - Instalação do Node (permite a compilação de JS na Máquina)

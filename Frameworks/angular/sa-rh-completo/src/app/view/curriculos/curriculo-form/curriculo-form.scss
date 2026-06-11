@@ -1,0 +1,89 @@
+$primary-color: #4f46e5;
+$text-dark: #1f2937;
+$border-color: #d1d5db;
+$shadow-light: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+h2 {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: $text-dark;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+form {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  max-width: 550px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: $shadow-light;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  label {
+    color: #374151;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: -0.75rem; // Aproxima o label do seu respectivo campo
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: $text-dark;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.15);
+    }
+
+    &::placeholder {
+      color: #9ca3af;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.5;
+  }
+
+  button[type="submit"] {
+    margin-top: 1rem;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 0.85rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 8%);
+    }
+
+    &:active {
+      transform: scale(0.99);
+    }
+
+    // Estado quando o formulário estiver inválido e o botão desabilitado
+    &:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+  }
+}

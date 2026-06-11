@@ -1,0 +1,37 @@
+{
+  "vagas": [
+    {
+      "id": "1",
+      "nome": "Desenvolver FrontEnd Jr",
+      "foto": "foto1.jpg",
+      "descricao": "Trabalhar com HTML, CSS e JS",
+      "salario": 5000
+    },
+    {
+      "id": "2",
+      "nome": "Desenvolver BackEnd Pleno",
+      "foto": "foto2.jpg",
+      "descricao": "Trabalhar com Desenvolvimento Web",
+      "salario": 9000
+    },
+    {
+      "id": "3",
+      "nome": "Desenvolver Fullstack Senior",
+      "foto": "foto3.jpg",
+      "descricao": "Trabalhar com Desenvolvimento Web",
+      "salario": 18000
+    }
+  ],
+  "curriculos": [
+    {
+      "nomeCompleto": "Gabriela",
+      "email": "gabi@gmail.com",
+      "telefone": "19 9999999999",
+      "formacao": "Nenhuma",
+      "experiencia": "Nenhuma",
+      "habilidades": [],
+      "id": "dCOAEMyRfsU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

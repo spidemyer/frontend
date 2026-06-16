@@ -6,14 +6,14 @@ import { CurriculoService } from '../../../service/curriculo';
 import { Curriculo } from '../../../model/curriculo.model';
 
 @Component({
-  selector: 'app-curriculo-form',
+  selector: 'app-curriculo-form', //formulário para criar ou editar um currículo
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './curriculo-form.html',
   styleUrls: ['./curriculo-form.scss'],
 })
 export class CurriculoFormComponent implements OnInit {
-  // Propriedade para o formulário se ligar via [(ngModel)]
+  // Propriedade para o formulário se ligar e armazenar os dados do currículo
   curriculo: Curriculo = {
     nomeCompleto: '',
     email: '',
@@ -23,7 +23,7 @@ export class CurriculoFormComponent implements OnInit {
     habilidades: [],
   };
 
-  editando: boolean = false;
+  editando: boolean = false; // Indica se estamos editando um currículo existente ou criando um novo
 
   constructor(
     private service: CurriculoService,
@@ -31,7 +31,7 @@ export class CurriculoFormComponent implements OnInit {
     private router: Router,
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void { //verificar se existe um id na rota para determinar se é edição ou criação
     const id = this.route.snapshot.paramMap.get('id');
 
     if (id) {
@@ -45,7 +45,7 @@ export class CurriculoFormComponent implements OnInit {
     }
   }
 
-  salvar(): void {
+  salvar(): void { // método para salvar o currículo, seja criando ou editando
     if (this.editando) {
       const id = this.curriculo.id;
       if (id == null) {

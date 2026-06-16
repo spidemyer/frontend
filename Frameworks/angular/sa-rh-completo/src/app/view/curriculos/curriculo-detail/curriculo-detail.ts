@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './curriculo-detail.html',
   styleUrl: './curriculo-detail.scss',
 })
-export class CurriculoDetail implements OnInit {
+export class CurriculoDetail implements OnInit { //exibir os detalhes do currículo
   curriculo!: Curriculo;
 
   constructor(
@@ -19,7 +19,7 @@ export class CurriculoDetail implements OnInit {
     private service: CurriculoService,
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void { //pegar o id do currículo 
     const id = Number(this.route.snapshot.paramMap.get('id'));
 
     this.service.buscarPorId(id).subscribe((data) => {

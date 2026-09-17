@@ -1,18 +1,19 @@
-# To-Do Pro
+# React + Vite
 
-O To-Do Pro é uma aplicação React focada em resolver os problemas de organização de tarefas diárias. O sistema elimina a necessidade de planilhas desatualizadas e fornece um controle simples, centralizado e declarativo para acompanhar itens pendentes e concluídos.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Pré-requisitos
-Certifique-se de ter as seguintes ferramentas instaladas em sua máquina antes de continuar:
-- **Node.js** (versão LTS recomendada)
-- **npm** (gerenciador de pacotes, incluído na instalação do Node.js)
-- **Git** (para controle de versão)
+Currently, two official plugins are available:
 
-## Instalação do Projeto
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-1. Abra o terminal.
-2. Clone este repositório (ou acesse a pasta raiz onde ele foi extraído).
-3. Dentro da pasta principal do projeto (`todo-pro`), baixe as dependências do React executando o comando abaixo:
+## React Compiler
 
-```bash
-npm install
+The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+
+Note: This will impact Vite dev & build performances.
+You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
